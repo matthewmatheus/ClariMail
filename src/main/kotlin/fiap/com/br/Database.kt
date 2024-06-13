@@ -1,0 +1,15 @@
+package com.example
+
+import fiap.com.br.Config
+import org.jetbrains.exposed.sql.Database
+
+object DatabaseFactory {
+    fun init() {
+        Database.connect(
+            url = Config.databaseUrl,
+            driver = Config.databaseDriver,
+            user = Config.databaseUser,
+            password = Config.databasePassword
+        )
+    }
+}
