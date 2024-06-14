@@ -7,7 +7,7 @@ import io.ktor.server.auth.*
 import io.ktor.server.auth.jwt.*
 
 object Security {
-    private val secret = "your_jwt_secret" // Substitua pelo seu segredo JWT
+    private val secret = "aB1cD2eF3gH4iJ5kL6mN7oP8qR9sT0uV1wX2yZ3!" // Substitua pela key JWT
 
     fun configureJWT(application: Application) {
         application.install(Authentication) {
