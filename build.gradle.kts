@@ -4,7 +4,7 @@ plugins {
 }
 
 application {
-    mainClass.set("fiap.com.br.ApplicationKt")
+    mainClass.set("com.example.ApplicationKt")
 }
 
 repositories {
@@ -24,8 +24,14 @@ dependencies {
     implementation("org.jetbrains.exposed:exposed-dao:0.41.1")
     implementation("org.jetbrains.exposed:exposed-jdbc:0.41.1")
     implementation("org.jetbrains.exposed:exposed-java-time:0.41.1")
+    implementation ("org.jetbrains.exposed:exposed-core:0.33.2")
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation ("org.slf4j:slf4j-api:1.7.32")
+    implementation ("ch.qos.logback:logback-classic:1.2.6")
     implementation("com.oracle.database.jdbc:ojdbc8:19.3.0.0")
     implementation("com.zaxxer:HikariCP:5.0.1")
     testImplementation("io.ktor:ktor-server-tests-jvm:2.3.3")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:1.8.20")
+
 }
