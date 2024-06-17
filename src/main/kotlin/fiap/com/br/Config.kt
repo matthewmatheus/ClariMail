@@ -1,6 +1,5 @@
 package fiap.com.br
 
-
 import io.ktor.server.config.*
 import com.typesafe.config.ConfigFactory
 

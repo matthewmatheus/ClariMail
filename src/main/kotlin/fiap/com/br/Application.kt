@@ -18,9 +18,9 @@ fun main() {
 }
 
 fun Application.module() {
-    val dbUrl = System.getenv("DATABASE_URL") ?: "jdbc:postgresql://localhost:5432/your_database"
-    val dbUser = System.getenv("DATABASE_USER") ?: "your_user"
-    val dbPassword = System.getenv("DATABASE_PASSWORD") ?: "your_password"
+    val dbUrl = System.getenv("DATABASE_URL") ?: "jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL"
+    val dbUser = System.getenv("DATABASE_USER") ?: "RM551960"
+    val dbPassword = System.getenv("DATABASE_PASSWORD") ?: "290300"
 
     Database.connect(hikariDataSource(dbUrl, dbUser, dbPassword))
 
@@ -47,7 +47,7 @@ fun hikariDataSource(url: String, user: String, pw: String): HikariDataSource {
         jdbcUrl = url
         username = user
         password = pw
-        driverClassName = "org.postgresql.Driver"
+        driverClassName = "oracle.jdbc.OracleDriver"
         maximumPoolSize = 3
         isAutoCommit = false
         transactionIsolation = "TRANSACTION_REPEATABLE_READ"
